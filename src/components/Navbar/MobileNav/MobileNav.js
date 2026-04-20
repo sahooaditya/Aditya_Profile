@@ -1,13 +1,13 @@
 import React from "react";
 import "./MobileNav.css";
 // import Logo from "../../../assets/images/ad.jpeg";
-import resumePDF from "../../../assets/images/AdityaKumarSahu(update resume1).pdf";
+import resumePDF from "../../../assets/images/Aditya Kumar Sahu.pdf";
 
 const MobileNav = ({ isOpen, toggleMenu }) => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resumePDF;
-    link.setAttribute("download", "AdityaKumarSahu_resume.pdf");
+    link.setAttribute("download", "Aditya Kumar Sahu.pdf");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -15,10 +15,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
 
   return (
     <div>
-      <div
-        className={`mobile-menu ${isOpen ? "active" : ""}`}
-        onClick={toggleMenu}
-      >
+      <div className={`mobile-menu ${isOpen ? "active" : ""}`} onClick={toggleMenu}>
         <div className="mobile-menu-container">
           <div className="logos">AdiTya</div>
 

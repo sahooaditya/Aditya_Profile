@@ -30,10 +30,7 @@ const Skills = () => {
           ))}
         </div>
         <div className="skills-info">
-          <SkillsInfoCard
-            heading={selectedSkill.title}
-            skills={selectedSkill.skills}
-          />
+          <SkillsInfoCard heading={selectedSkill.title} skills={selectedSkill.skills} />
         </div>
       </div>
     </section>

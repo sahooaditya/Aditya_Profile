@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import Logo from "../../assets/images/ad.jpeg";
 import MobileNav from "./MobileNav/MobileNav";
-import resumePDF from "../../assets/images/AdityaKumarSahu(update resume1).pdf";
+import resumePDF from "../../assets/images/Aditya Kumar Sahu.pdf";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = resumePDF;
-    link.setAttribute("download", "AdityaKumarSahu_resume.pdf"); // Adjusted file name
+    link.setAttribute("download", "Aditya Kumar Sahu.pdf"); // Adjusted file name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -52,9 +52,7 @@ const Navbar = () => {
             </button>
           </ul>
           <button className="menu-btn" onClick={toggleMenu}>
-            <span style={{ fontSize: "1.8rem" }}>
-              {openMenu ? <CloseIcon /> : <MenuIcon />}
-            </span>
+            <span style={{ fontSize: "1.8rem" }}>{openMenu ? <CloseIcon /> : <MenuIcon />}</span>
           </button>
         </div>
       </nav>

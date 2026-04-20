@@ -14,15 +14,14 @@ const Hero = () => {
       <div className="hero-content">
         <h2>React Fronted Developer</h2>
         <p>
-          "Hello! 👋 I'm Aditya Kumar Sahu, a dedicated React.js developer with
-          a proven track record of delivering high-quality and innovative web
-          solutions. Over the past 2.7+ years, I've had the privilege of working
-          on diverse projects, honing my skills in front-end development, and
-          building robust, user-friendly applications.
-          <b style={{ color: "#96b951" }}>
-            {" "}
-            I am actively seeking new job opportunities."
-          </b>
+          "Hello! 👋 I'm Aditya Kumar Sahu, Frontend Developer with 4+ years of experience
+          specializing in React.js and Next.js. Skilled in building responsive, highperformance web
+          applications using modern JavaScript (ES6+), HTML5, CSS3, and SCSS. Experienced in
+          translating UI/UX designs into clean, reusable components, optimizing performance, and
+          integrating REST APIs. Strong understanding of component-based architecture, state
+          management, and best coding practices. Passionate about writing scalable code and
+          delivering user-friendly digital experiences.
+          <b style={{ color: "#96b951" }}> I am actively seeking new job opportunities."</b>
         </p>
       </div>
       <div className="hero-img">
@@ -34,13 +33,36 @@ const Hero = () => {
         </div>
         <div>
           <div className="tech-icon">
-            <img src={html} alt="" />
+            <i class="devicon-javascript-plain colored"></i>
           </div>
           <div className="tech-icon">
-            <img src={css} alt="" />
+            <i class="devicon-typescript-plain colored"></i>
           </div>
           <div className="tech-icon">
-            <img src={js} alt="" />
+            <i class="devicon-html5-plain colored"></i>
+          </div>
+          <div className="tech-icon">
+            <i class="devicon-css3-plain colored"></i>
+          </div>
+          <div className="tech-icon">
+            <i class="devicon-sass-original colored"></i>
+          </div>
+        </div>
+        <div>
+          <div className="tech-icon">
+            <i class="devicon-react-original colored"></i>
+          </div>
+          <div className="tech-icon">
+            <i class="devicon-axios-plain colored"></i>
+          </div>
+          <div className="tech-icon">
+            <i class="devicon-redux-original colored"></i>
+          </div>
+          <div className="tech-icon">
+            <i class="devicon-bootstrap-plain colored"></i>
+          </div>
+          <div className="tech-icon">
+            <i class="devicon-tailwindcss-plain colored"></i>
           </div>
         </div>
       </div>
