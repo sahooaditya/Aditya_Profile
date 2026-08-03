@@ -3,10 +3,12 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
 import Loader from "./components/common/Loader/Loader";
+import MouseFollower from "./components/common/MouseFollower/MouseFollower";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
 import About from "./components/sections/About/About";
 import Skills from "./components/sections/Skills/Skills";
+import Explore from "./components/sections/Explore/Explore";
 import Experience from "./components/sections/Experience/Experience";
 import Projects from "./components/sections/Projects/Projects";
 import Contact from "./components/sections/Contact/Contact";
@@ -101,6 +103,7 @@ const App = () => {
 
   return (
     <div className="app-shell">
+      <MouseFollower />
       <div className="background-media" aria-hidden="true" />
       <div className="grid-layer" aria-hidden="true" />
       <div className="line-art" aria-hidden="true" />
@@ -109,6 +112,7 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
+        <Explore />
         <Experience />
         <Projects />
         <Contact />

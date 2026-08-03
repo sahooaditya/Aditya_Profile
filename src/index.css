@@ -28,3 +28,13 @@ img {
   color: #06111d;
   background: #00d6c9;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  input,
+  textarea {
+    cursor: none;
+  }
+}

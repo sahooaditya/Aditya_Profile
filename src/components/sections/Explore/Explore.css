@@ -1,0 +1,113 @@
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.explore-card {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  padding: 1.35rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(0, 214, 201, 0.1), transparent 42%),
+    var(--surface);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.explore-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.24;
+}
+
+:root[data-theme="light"] .explore-card::before {
+  background-image:
+    linear-gradient(90deg, rgba(8, 21, 35, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(8, 21, 35, 0.08) 1px, transparent 1px);
+}
+
+.explore-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 214, 201, 0.58);
+  background:
+    linear-gradient(145deg, rgba(255, 186, 73, 0.12), rgba(0, 214, 201, 0.1)),
+    var(--surface-strong);
+}
+
+.explore-icon,
+.explore-card h3,
+.explore-card p,
+.explore-list {
+  position: relative;
+  z-index: 1;
+}
+
+.explore-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  color: #06111d;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  font-size: 1.45rem;
+}
+
+.explore-card h3 {
+  margin: 1.3rem 0 0.75rem;
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+.explore-card p {
+  min-height: 132px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.explore-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.2rem;
+}
+
+.explore-list span {
+  padding: 0.45rem 0.62rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--surface-strong);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+@media (max-width: 1100px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-card {
+    min-height: auto;
+  }
+
+  .explore-card p {
+    min-height: auto;
+  }
+}
