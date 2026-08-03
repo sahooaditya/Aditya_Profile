@@ -1,0 +1,112 @@
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  left: 16px;
+  width: 2px;
+  background: linear-gradient(var(--accent), var(--warm));
+  opacity: 0.5;
+}
+
+.timeline-card {
+  position: relative;
+  margin-left: 3.2rem;
+  padding: 1.35rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background: var(--surface);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.timeline-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(0, 214, 201, 0.54);
+  background: var(--surface-strong);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -3.1rem;
+  top: 1.45rem;
+  width: 34px;
+  height: 34px;
+  border: 7px solid var(--bg);
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  box-shadow: 0 0 0 1px var(--glass-border), 0 12px 32px rgba(0, 214, 201, 0.24);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.timeline-header span {
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.timeline-header h3 {
+  margin: 0.35rem 0 0.25rem;
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.timeline-header p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.timeline-header small {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  color: var(--muted);
+  background: var(--surface-strong);
+  white-space: nowrap;
+}
+
+.timeline-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.timeline-card li + li {
+  margin-top: 0.55rem;
+}
+
+@media (max-width: 720px) {
+  .timeline-header {
+    display: grid;
+  }
+
+  .timeline-header small {
+    width: fit-content;
+    white-space: normal;
+  }
+
+  .timeline-card {
+    margin-left: 2.3rem;
+  }
+
+  .timeline-dot {
+    left: -2.35rem;
+  }
+}

@@ -1,13 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-
-@import url("https://fonts.googleapis.com/css?family=Poppins:wght@400-500; 600&display-swap");
-*{
-font-family: "Poppins", sans-serif;
-margin: 0;
-box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-color: #fff;
-background-color: #060417;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #07111d;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  color: #06111d;
+  background: #00d6c9;
 }

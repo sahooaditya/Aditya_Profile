@@ -1,0 +1,162 @@
+.navbar-shell {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 1rem clamp(1rem, 3vw, 2.5rem) 0;
+}
+
+.navbar {
+  max-width: 1200px;
+  min-height: 74px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  background: var(--glass);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(22px);
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-mark span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: #06111d;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  box-shadow: 0 10px 30px rgba(0, 214, 201, 0.24);
+}
+
+.brand-mark strong {
+  font-size: 1.05rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+
+.nav-links a {
+  position: relative;
+  padding: 0.72rem 0.9rem;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+  background: var(--surface-strong);
+  transform: translateY(-2px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.icon-button,
+.resume-button {
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  cursor: pointer;
+  color: var(--text);
+  background: var(--surface-strong);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.icon-button {
+  width: 44px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+.resume-button {
+  gap: 0.5rem;
+  padding: 0 1rem;
+  border-radius: 15px;
+  font-weight: 800;
+}
+
+.icon-button:hover,
+.resume-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--accent), var(--warm));
+  color: #07111d;
+  box-shadow: 0 16px 42px rgba(0, 214, 201, 0.22);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 920px) {
+  .navbar {
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    top: calc(100% + 0.75rem);
+    display: grid;
+    padding: 0.75rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 22px;
+    background: var(--glass-solid);
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .nav-links.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .navbar-shell {
+    padding-inline: 0.75rem;
+  }
+
+  .brand-mark strong,
+  .resume-button {
+    display: none;
+  }
+}

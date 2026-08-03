@@ -1,0 +1,28 @@
+.site-footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 2.5rem) 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--text);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+@media (max-width: 620px) {
+  .site-footer {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+  }
+}
