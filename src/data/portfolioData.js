@@ -1,4 +1,4 @@
-import heroImage from "../assets/images/Aditya.png";
+import heroImage from "../assets/images/aditya.jpg";
 import emailIcon from "../assets/images/email.png";
 import githubIcon from "../assets/images/git.png";
 import reactIcon from "../assets/images/tech.png";
@@ -20,7 +20,13 @@ export const profile = {
   location: "India / Remote",
   summary:
     "Frontend-focused developer with 4+ years of experience building responsive React and Next.js products, now expanding deeper into full-stack development with Node.js, Firebase, APIs, databases, and deployment workflows.",
-  highlights: ["4+ years experience", "React + Next.js", "Full-stack expanding", "Firebase + APIs", "Available for roles"],
+  highlights: [
+    "4+ years experience",
+    "React + Next.js",
+    "Full-stack expanding",
+    "Firebase + APIs",
+    "Available for roles",
+  ],
 };
 
 export const navItems = [
@@ -37,49 +43,56 @@ export const skills = [
   {
     title: "Frontend Engineering",
     icon: reactIcon,
-    description: "React.js, Next.js, hooks, routing, reusable components, and scalable UI architecture.",
+    description:
+      "React.js, Next.js, hooks, routing, reusable components, and scalable UI architecture.",
     stack: ["React", "Next.js", "JavaScript", "TypeScript", "Redux"],
     level: 92,
   },
   {
     title: "UI Craft",
     icon: uiIcon,
-    description: "Responsive layouts, glass UI, micro-interactions, accessibility basics, and polished CSS systems.",
+    description:
+      "Responsive layouts, glass UI, micro-interactions, accessibility basics, and polished CSS systems.",
     stack: ["HTML5", "CSS3", "SCSS", "Tailwind", "Bootstrap"],
     level: 90,
   },
   {
     title: "API Integration",
     icon: apiIcon,
-    description: "REST APIs, Firebase workflows, async states, authentication patterns, validation, and error handling.",
+    description:
+      "REST APIs, Firebase workflows, async states, authentication patterns, validation, and error handling.",
     stack: ["REST", "Axios", "Fetch", "Firebase", "JWT", "Postman"],
     level: 86,
   },
   {
     title: "Full Stack Growth",
     icon: managementIcon,
-    description: "Learning and building backend features with Node.js, Express, database models, and API-first architecture.",
+    description:
+      "Learning and building backend features with Node.js, Express, database models, and API-first architecture.",
     stack: ["Node.js", "Express.js", "MongoDB", "Firestore", "Auth"],
     level: 74,
   },
   {
     title: "Performance",
     icon: performanceIcon,
-    description: "Lazy loading, image optimization, clean state updates, and responsive performance tuning.",
+    description:
+      "Lazy loading, image optimization, clean state updates, and responsive performance tuning.",
     stack: ["SEO", "Lazy Load", "Memoization", "DevTools"],
     level: 82,
   },
   {
     title: "Tooling",
     icon: toolsIcon,
-    description: "Git workflows, npm, debugging, clean component boundaries, and maintainable project structure.",
+    description:
+      "Git workflows, npm, debugging, clean component boundaries, and maintainable project structure.",
     stack: ["Git", "GitHub", "npm", "ESLint", "VS Code"],
     level: 85,
   },
   {
     title: "Quality & Testing",
     icon: testingIcon,
-    description: "Debugging, browser testing, form edge cases, API checks, and release-ready UI verification.",
+    description:
+      "Debugging, browser testing, form edge cases, API checks, and release-ready UI verification.",
     stack: ["DevTools", "Jest", "Manual QA", "Error States"],
     level: 78,
   },
@@ -174,6 +187,57 @@ export const projects = [
     description:
       "Practice modules focused on Node.js APIs, authentication thinking, database schemas, and deployable React-to-backend flows.",
     tags: ["Node.js", "Express", "MongoDB", "JWT"],
+  },
+];
+
+export const freelanceProjects = [
+  {
+    title: "Business Website Revamp",
+    category: "Freelance Landing Page",
+    description:
+      "A modern responsive website for service businesses with hero section, service blocks, testimonials, contact CTA, and fast mobile performance.",
+    outcome: "Better first impression, stronger trust, and clear lead conversion path.",
+    stack: ["React", "Responsive UI", "SEO", "Contact Form"],
+  },
+  {
+    title: "Portfolio Redesign Package",
+    category: "Personal Branding",
+    description:
+      "A premium portfolio redesign with animated hero, theme switcher, project highlights, resume download, smooth scrolling, and Firebase enquiry capture.",
+    outcome: "Professional online identity for job search, freelancing, and client outreach.",
+    stack: ["React", "GSAP", "Firebase", "Glass UI"],
+  },
+  {
+    title: "Admin Dashboard UI",
+    category: "SaaS Interface",
+    description:
+      "A clean dashboard experience with stats cards, filterable tables, loading states, API-ready components, and reusable layout structure.",
+    outcome: "Faster operations and scalable UI foundation for product teams.",
+    stack: ["React", "Charts", "API", "Reusable Components"],
+  },
+  {
+    title: "Booking & Lead System",
+    category: "Full Stack Feature",
+    description:
+      "A lightweight booking/contact system with validated forms, Firestore storage, success feedback, and deployable frontend workflow.",
+    outcome: "Simple client enquiry management without heavy backend setup.",
+    stack: ["Firebase", "Firestore", "Forms", "Validation"],
+  },
+  {
+    title: "Startup MVP Frontend",
+    category: "Product Build",
+    description:
+      "A launch-ready MVP interface with landing page, auth-ready screens, dashboard modules, pricing section, and API integration structure.",
+    outcome: "A polished first product version ready for demos and investor conversations.",
+    stack: ["Next.js", "React", "REST API", "MVP"],
+  },
+  {
+    title: "Full Stack CRUD Module",
+    category: "Backend Expansion",
+    description:
+      "A practical CRUD module plan using React frontend, Node.js APIs, database schema thinking, authentication flow, and deployment checklist.",
+    outcome: "Clear path from UI-only work to complete full-stack project delivery.",
+    stack: ["Node.js", "Express", "MongoDB", "JWT"],
   },
 ];
 
