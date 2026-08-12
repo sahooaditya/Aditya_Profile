@@ -19,7 +19,7 @@ const Navbar = ({ theme, onThemeToggle }) => {
 
   return (
     <header className="navbar-shell">
-      <nav className="navbar">
+      <nav className="navbar" data-animate="top">
         <a className="brand-mark" href="#home" onClick={closeMenu} aria-label="Aditya portfolio home">
           <span>AS</span>
           <strong>Aditya</strong>

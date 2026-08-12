@@ -18,8 +18,8 @@ const About = () => {
         text="My work focuses on frontend systems that look sharp, stay maintainable, and feel natural across desktop, tablet, and mobile."
       />
       <div className="about-grid">
-        {cards.map((card) => (
-          <article className="about-card" key={card.title}>
+        {cards.map((card, index) => (
+          <article className="about-card" key={card.title} data-animate={index % 2 === 0 ? "left" : "right"} data-delay={index * 0.08}>
             <span>{card.icon}</span>
             <h3>{card.title}</h3>
             <p>{card.text}</p>

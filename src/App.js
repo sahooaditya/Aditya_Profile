@@ -34,36 +34,39 @@ const App = () => {
     if (isLoading) return undefined;
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".reveal",
-        { y: 64, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.9,
-          ease: "power3.out",
-          stagger: 0.08,
-          scrollTrigger: {
-            trigger: ".site-main",
-            start: "top 74%",
-          },
-        },
-      );
+      const animationDirections = {
+        top: { x: 0, y: -80 },
+        left: { x: -95, y: 0 },
+        right: { x: 95, y: 0 },
+        bottom: { x: 0, y: 80 },
+      };
 
-      gsap.utils.toArray(".motion-section").forEach((section) => {
+      gsap.utils.toArray("[data-animate]").forEach((element) => {
+        const direction = element.dataset.animate || "bottom";
+        const fromPosition = animationDirections[direction] || animationDirections.bottom;
+
         gsap.fromTo(
-          section,
-          { y: 70, opacity: 0 },
+          element,
           {
+            ...fromPosition,
+            opacity: 0,
+            filter: "blur(10px)",
+          },
+          {
+            x: 0,
             y: 0,
             opacity: 1,
-            duration: 0.9,
+            filter: "blur(0px)",
+            duration: Number(element.dataset.duration) || 0.9,
+            delay: Number(element.dataset.delay) || 0,
             ease: "power3.out",
             scrollTrigger: {
-              trigger: section,
-              start: "top 82%",
+              trigger: element,
+              start: "top 88%",
+              end: "bottom 12%",
+              toggleActions: "play none none reverse",
             },
-          },
+          }
         );
       });
 

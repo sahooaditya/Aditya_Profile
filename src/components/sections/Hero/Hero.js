@@ -7,12 +7,14 @@ const Hero = () => {
   return (
     <section className="hero-section section-frame" id="home">
       <div className="hero-copy">
-        <span className="eyebrow reveal">React + Next.js Portfolio</span>
-        <h1 className="reveal">
+        <span className="eyebrow" data-animate="top">
+          React + Next.js Portfolio
+        </span>
+        <h1 data-animate="left">
           Building polished web interfaces that feel fast, clear, and alive.
         </h1>
-        <p className="reveal">{profile.summary}</p>
-        <div className="hero-actions reveal">
+        <p data-animate="right">{profile.summary}</p>
+        <div className="hero-actions" data-animate="bottom">
           <a className="primary-link" href="#contact">
             <FiMail />
             Contact Me
@@ -22,14 +24,14 @@ const Hero = () => {
             <FiArrowDownRight />
           </a>
         </div>
-        <div className="highlight-row reveal">
+        <div className="highlight-row" data-animate="bottom" data-delay="0.12">
           {profile.highlights.map((item) => (
             <span key={item}>{item}</span>
           ))}
         </div>
       </div>
 
-      <div className="hero-visual reveal">
+      <div className="hero-visual" data-animate="right">
         <div className="hero-portrait-card">
           <img src={profile.heroImage} alt={profile.name} />
           <div className="status-card">

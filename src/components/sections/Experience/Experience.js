@@ -13,8 +13,13 @@ const Experience = () => {
         text="Recent roles focused on React, Next.js, API-driven screens, performance, maps, and maintainable UI systems."
       />
       <div className="timeline">
-        {experiences.map((experience) => (
-          <article className="timeline-card" key={`${experience.company}-${experience.period}`}>
+        {experiences.map((experience, index) => (
+          <article
+            className="timeline-card"
+            key={`${experience.company}-${experience.period}`}
+            data-animate={index % 2 === 0 ? "left" : "right"}
+            data-delay={index * 0.08}
+          >
             <div className="timeline-dot" />
             <div className="timeline-header">
               <div>

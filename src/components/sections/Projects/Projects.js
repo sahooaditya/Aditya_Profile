@@ -5,6 +5,8 @@ import { freelanceProjects, projects } from "../../../data/portfolioData";
 import "./Projects.css";
 
 const Projects = () => {
+  const directions = ["left", "bottom", "right", "top"];
+
   return (
     <section className="projects-section motion-section section-frame" id="projects">
       <SectionHeading
@@ -14,7 +16,7 @@ const Projects = () => {
       />
       <div className="project-grid">
         {projects.map((project, index) => (
-          <article className="project-card" key={project.title} data-cursor="Open">
+          <article className="project-card" key={project.title} data-cursor="Open" data-animate={directions[index % directions.length]} data-delay={index * 0.06}>
             <span className="project-count">0{index + 1}</span>
             <small>{project.type}</small>
             <h3>{project.title}</h3>
@@ -32,11 +34,11 @@ const Projects = () => {
       <div className="freelance-showcase">
         <div className="freelance-heading">
           <span>Freelance Services</span>
-          <h3>Client-focused project content for portfolio, startup, and business websites.</h3>
+          <h3 data-animate="left">Client-focused project content for portfolio, startup, and business websites.</h3>
         </div>
         <div className="freelance-grid">
-          {freelanceProjects.map((project) => (
-            <article className="freelance-card" key={project.title} data-cursor="Hire">
+          {freelanceProjects.map((project, index) => (
+            <article className="freelance-card" key={project.title} data-cursor="Hire" data-animate={directions[index % directions.length]} data-delay={(index % 3) * 0.07}>
               <small>{project.category}</small>
               <h4>{project.title}</h4>
               <p>{project.description}</p>

@@ -68,7 +68,7 @@ const Contact = () => {
         text="The form keeps the same Firebase workflow, now with a cleaner interface and better feedback states."
       />
       <div className="contact-grid">
-        <div className="contact-panel">
+        <div className="contact-panel" data-animate="left">
           <h3>Quick links</h3>
           <p>Available for frontend roles, React dashboards, portfolio work, and production UI improvements.</p>
           {contactCards.map((card) => (
@@ -82,7 +82,7 @@ const Contact = () => {
           ))}
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit} data-animate="right">
           <div className="form-row">
             <label>
               <span>First Name</span>

@@ -7,6 +7,8 @@ import "./Explore.css";
 const icons = [<FiMonitor />, <FiServer />, <FiDatabase />, <FiGitBranch />];
 
 const Explore = () => {
+  const directions = ["left", "top", "bottom", "right"];
+
   return (
     <section className="explore-section motion-section section-frame" id="explore">
       <SectionHeading
@@ -16,7 +18,7 @@ const Explore = () => {
       />
       <div className="explore-grid">
         {exploreTech.map((group, index) => (
-          <article className="explore-card" key={group.title}>
+          <article className="explore-card" key={group.title} data-animate={directions[index % directions.length]} data-delay={index * 0.07}>
             <div className="explore-icon">{icons[index]}</div>
             <h3>{group.title}</h3>
             <p>{group.text}</p>

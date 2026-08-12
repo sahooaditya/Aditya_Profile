@@ -109,6 +109,10 @@
   opacity: 1;
 }
 
+[data-animate] {
+  will-change: transform, opacity, filter;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
