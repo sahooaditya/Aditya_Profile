@@ -8,6 +8,13 @@ import performanceIcon from "../assets/images/stock-market.png";
 import toolsIcon from "../assets/images/soft.png";
 import managementIcon from "../assets/images/management.png";
 import testingIcon from "../assets/images/testing.png";
+import htmlIcon from "../assets/images/html.png";
+import cssIcon from "../assets/images/css.png";
+import jsIcon from "../assets/images/js.png";
+import gitAltIcon from "../assets/images/git1.png";
+import facebookIcon from "../assets/images/facebook.png";
+import instagramIcon from "../assets/images/insta.png";
+import linkedinIcon from "../assets/images/linkdin.png";
 import resumePDF from "../assets/images/Aditya Kumar Sahu.pdf";
 
 export const profile = {
@@ -36,6 +43,7 @@ export const navItems = [
   { label: "Explore", href: "#explore" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -238,6 +246,77 @@ export const freelanceProjects = [
       "A practical CRUD module plan using React frontend, Node.js APIs, database schema thinking, authentication flow, and deployment checklist.",
     outcome: "Clear path from UI-only work to complete full-stack project delivery.",
     stack: ["Node.js", "Express", "MongoDB", "JWT"],
+  },
+];
+
+export const galleryFilters = ["All", "Profile", "Technology", "Branding"];
+
+export const galleryImages = [
+  {
+    title: "Portfolio Portrait",
+    category: "Profile",
+    image: heroImage,
+    description: "Primary portfolio image used in the hero preview and personal branding section.",
+  },
+  {
+    title: "React Development",
+    category: "Technology",
+    image: reactIcon,
+    description: "Frontend engineering focus around React, Next.js, reusable UI, and component architecture.",
+  },
+  {
+    title: "UI UX Design",
+    category: "Technology",
+    image: uiIcon,
+    description: "Visual design, responsive layout, glass components, and interaction polish.",
+  },
+  {
+    title: "API Integration",
+    category: "Technology",
+    image: apiIcon,
+    description: "REST APIs, Firebase workflows, forms, validation, and backend handoff points.",
+  },
+  {
+    title: "HTML CSS JavaScript",
+    category: "Technology",
+    image: htmlIcon,
+    description: "Core web foundation for responsive and accessible frontend experiences.",
+  },
+  {
+    title: "CSS Styling",
+    category: "Technology",
+    image: cssIcon,
+    description: "Modern styling, animation-ready layout, responsive grids, and visual systems.",
+  },
+  {
+    title: "JavaScript Logic",
+    category: "Technology",
+    image: jsIcon,
+    description: "Interactive UI logic, data handling, dynamic states, and frontend behavior.",
+  },
+  {
+    title: "Git Workflow",
+    category: "Technology",
+    image: gitAltIcon,
+    description: "Version control, collaboration, clean commits, and project workflow habits.",
+  },
+  {
+    title: "Social Branding",
+    category: "Branding",
+    image: linkedinIcon,
+    description: "Professional profile, client outreach, and portfolio visibility.",
+  },
+  {
+    title: "Creative Presence",
+    category: "Branding",
+    image: instagramIcon,
+    description: "Visual identity and creative presentation for personal branding.",
+  },
+  {
+    title: "Community Reach",
+    category: "Branding",
+    image: facebookIcon,
+    description: "Social visibility and contact channel for freelance opportunities.",
   },
 ];
 

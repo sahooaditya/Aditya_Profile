@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
 import Loader from "./components/common/Loader/Loader";
 import MouseFollower from "./components/common/MouseFollower/MouseFollower";
+import ScrollProgress from "./components/common/ScrollProgress/ScrollProgress";
 import Navbar from "./components/layout/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
 import About from "./components/sections/About/About";
@@ -11,6 +12,7 @@ import Skills from "./components/sections/Skills/Skills";
 import Explore from "./components/sections/Explore/Explore";
 import Experience from "./components/sections/Experience/Experience";
 import Projects from "./components/sections/Projects/Projects";
+import Gallery from "./components/sections/Gallery/Gallery";
 import Contact from "./components/sections/Contact/Contact";
 import Footer from "./components/layout/Footer/Footer";
 
@@ -66,7 +68,7 @@ const App = () => {
               end: "bottom 12%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       });
 
@@ -106,6 +108,7 @@ const App = () => {
 
   return (
     <div className="app-shell">
+      <ScrollProgress />
       <MouseFollower />
       <div className="background-media" aria-hidden="true" />
       <div className="grid-layer" aria-hidden="true" />
@@ -118,6 +121,7 @@ const App = () => {
         <Explore />
         <Experience />
         <Projects />
+        <Gallery />
         <Contact />
       </main>
       <Footer />
